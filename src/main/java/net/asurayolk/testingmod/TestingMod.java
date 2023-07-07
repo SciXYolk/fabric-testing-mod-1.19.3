@@ -1,5 +1,7 @@
 package net.asurayolk.testingmod;
 
+import net.asurayolk.testingmod.block.ModBlocks;
+import net.asurayolk.testingmod.item.ModItemGroup;
 import net.asurayolk.testingmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -12,6 +14,8 @@ public class TestingMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroup.registerItemGroups();
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
